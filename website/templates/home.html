@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block tittle %}Regalo - IN Rameros{% endblock %}
+
+{% block content %}
+<div class="vh-container" id="container">
+    
+    <div class="center-container txt-center">
+        <h3>Bienvenido al intercambio</h3>
+        {% if user.gift_to and (not user.first_time) %}
+            <p>Te ha tocado regalarle a...</p>
+            <br>
+            <img src="static/images/{{user.gift_to}}.jpeg">
+            <br><br>
+            <h4>{{gift_user.full_name}}</h4>
+        {% else %}
+            <br>
+            <a href="/get-person"><div class="btn w-100">Sortear</div></a>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

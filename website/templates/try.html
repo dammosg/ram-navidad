@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover Button</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+    }
+
+    #container {
+      position: relative;
+      width: 80vw;
+      height: 80vh;
+      border: 2px dashed #888;
+    }
+
+    #movingButton {
+      position: absolute;
+      padding: 10px 20px;
+      background-color: #ff4500;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    #movingButton:hover {
+      background-color: #ff6347;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <button id="movingButton">Catch Me!</button>
+  </div>
+
+  <script>
+    const button = document.getElementById('movingButton');
+    const container = document.getElementById('container');
+
+    // Center the button initially
+    const centerButton = () => {
+      const containerRect = container.getBoundingClientRect();
+      const buttonWidth = button.offsetWidth;
+      const buttonHeight = button.offsetHeight;
+
+      const centerX = (containerRect.width - buttonWidth) / 2;
+      const centerY = (containerRect.height - buttonHeight) / 2;
+
+      button.style.transform = `translate(${centerX}px, ${centerY}px)`;
+    };
+
+    // Move the button to a random position on hover
+    button.addEventListener('mouseover', () => {
+      const containerRect = container.getBoundingClientRect();
+      const randomX = Math.random() * (containerRect.width - button.offsetWidth);
+      const randomY = Math.random() * (containerRect.height - button.offsetHeight);
+
+      button.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    });
+
+    // Center the button when the page loads
+    window.addEventListener('load', centerButton);
+  </script>
+</body>
+</html>

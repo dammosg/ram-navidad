@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block tittle %}Users{% endblock %}
+
+{% block content %}
+<div class="content-container">
+  <h1 class="font-poppins txt-center">Usuarios registrados</h1>
+  <table class="table sortable font-poppins">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Name</th>
+          <th scope="col">Password</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        {% for user in users %}
+        <tr>
+          <td class="txt-center">{{ user.id }}</td>
+          <td class="txt-center">{{ user.full_name }}</td>
+          <td class="txt-center">{{ user.password }}</td>
+          <td class="txt-center">{{ user.email }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+</div>
+
+<p>
+<a href="/logout">Logout</a>
+</p>
+
+{% endblock %}

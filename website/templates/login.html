@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block tittle %}Login - IN Rameros{% endblock %}
+
+{% block content %}
+<div class="vh-container" id="container">
+    
+    <div class="center-container">
+        <div class="login p-4 font-poppins">
+            <h3 class="mb-15 txt-center">Iniciar sesión</h3>
+            <div class="login-form-container">
+                <form action="" method="post" class="login-form font-poppins">
+                    <div class="form-group">
+                        <div class="form-input-container">
+                            <input type="user" class="form-input font-poppins" name="user" id="user" placeholder="Numero de empleado" required>
+                        </div>
+                    </div>
+                    <div class="form-group mb-15">
+                        <div class="form-input-container">
+                            <input type="password" class="form-input font-poppins" name="password" id="password" placeholder="Contraseña" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn w-100 font-poppins" id="movingButton">Iniciar sesión</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

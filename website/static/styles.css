@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: #000063;
+    color: #fff;
+    height: 3rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: .5rem;
+    border: 2px solid #000063;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000063;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.vh-container {
+    height: 80dvh;
+    width: 80dvw;
+}
+
+.center-container {
+    width: 25rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: .5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+}
+
+.form-input-container input {
+    width: 100%;
+    padding: .3rem;
+    margin-bottom: .5rem;
+}
+
+.form-register button {
+    width: 100%;
+    padding: .3rem;
+}
+
+.center-container img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.w-40 {
+    width: 35rem;
+}
+
+.login-form {
+    position: relative;
+}
+
+.form-register {
+    width: 20rem;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.mb-15 {
+    margin-bottom: .5rem;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url('./Fonts/Poppins/Poppins-Regular.ttf');
+    font-weight: normal;
+}
